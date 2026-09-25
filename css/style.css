@@ -183,23 +183,11 @@ main {
     border-radius: 2px;
 }
 
-/* Music List - 가로 스크롤 */
+/* Music List - 줄바꿈 */
 .music-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.music-list::-webkit-scrollbar {
-    height: 3px;
-}
-
-.music-list::-webkit-scrollbar-thumb {
-    background: var(--purple);
-    border-radius: 2px;
 }
 
 .music-item {
