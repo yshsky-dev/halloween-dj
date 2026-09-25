@@ -183,13 +183,23 @@ main {
     border-radius: 2px;
 }
 
-/* Music List - 2줄 wrap */
+/* Music List - 가로 스크롤 */
 .music-list {
     display: flex;
-    flex-wrap: wrap;
     gap: 4px;
-    overflow: hidden;
-    max-height: 58px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.music-list::-webkit-scrollbar {
+    height: 3px;
+}
+
+.music-list::-webkit-scrollbar-thumb {
+    background: var(--purple);
+    border-radius: 2px;
 }
 
 .music-item {
@@ -344,8 +354,6 @@ footer { display: none; }
     .ctrl-btn { width: 24px; height: 24px; }
     .ctrl-btn.play { width: 28px; height: 28px; }
     .vol-slider { width: 40px; }
-    
-    .music-list { max-height: 50px; }
 }
 
 /* 태블릿/데스크탑 */
@@ -366,7 +374,6 @@ footer { display: none; }
     .vol-slider { width: 70px; }
     #current-track { max-width: 250px; }
     
-    .music-list { max-height: 65px; }
     .music-item { padding: 4px 8px; font-size: 0.65rem; }
 }
 
